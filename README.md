@@ -37,7 +37,7 @@ On the other hand, a higher p-value is better because it indicates higher confid
 The two best distributions were Johnson SU and Gaussian Mixture Model with 9 components ('modes'). Graphs of these fits can be seen below:
 
 ![Fitted GMM distribution](images/GMM.png)
-![Fitted Johnson SU distribution](images/JohnsonSU.png)
+![Fitted Johnson SU distribution](images/johnsonsu.png)
 
 === Gaussian ===
 Parameters: mean=0.037760068414518635, standard deviation=1.1072097227036375
