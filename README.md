@@ -26,7 +26,7 @@ The purpose of this project is to demonstrate this deviation from normality and 
 
 ## Method
 
-I fit a Gaussian distribution to ten years of MSCI ACWI daily total-returns, starting at the 24th of April 2025. The same data is used to fit Jonhson SU and Tukey Lambda distributions as well as a Gaussian Mixture Model. Tukey Labda and Jonson SU are popular in financial modelling to their superior ability to capture heavy tails (extreme positive or negative values that are very unlikely under a Gaussian framework). The accuracy of the distributions are compared using the Kolmogorov-Smirnov test on three years of out-of-sample data.
+I fit a Gaussian distribution to ten years of MSCI ACWI daily total-returns, starting at the 24th of April 2025. The same data was used to fit Jonhson SU and Tukey Lambda distributions as well as a Gaussian Mixture Model. Tukey Labda and Jonson SU are popular in financial modelling to their superior ability to capture heavy tails (extreme positive or negative values that are very unlikely under a Gaussian framework). The accuracy of the distributions are compared using the Kolmogorov-Smirnov test on three years of out-of-sample data.
 
 
 ## Results 
@@ -40,37 +40,35 @@ The two best distributions were Johnson SU and Gaussian Mixture Model with 9 com
 ![Fitted Johnson SU distribution](images/johnsonsu.png)
 
 === Gaussian ===
-Parameters: mean=0.037760068414518635, standard deviation=1.1072097227036375
-KS Statistic: [0.11306013]
+Parameters: mean=0.037760068414518635, standard deviation=1.1072097227036375  
+KS Statistic: [0.11306013]  
 P-Value: [8.10190651e-09]
 
 === Johnson SU ===
-Parameters: a=0.1046772810873723, b=1.1400055678255596, loc=0.1487844110017341, scale=0.8020460624157375
-KS Statistic: [0.03865402]
+Parameters: a=0.1046772810873723, b=1.1400055678255596, loc=0.1487844110017341, scale=0.8020460624157375  
+KS Statistic: [0.03865402]  
 P-Value: [0.20638882]
 
 === Tukey Lambda ===
-Parameters: loc=0.0769003229605155, scale=0.3799193834238573
+Parameters: loc=0.0769003229605155, scale=0.3799193834238573  
 KS Statistic: [0.04581586]
-P-Value: [0.08283883]
+P-Value: [0.08283883]  
 
 === Gaussian Mixture Model ===
 
-K-S Statistic: [0.04523505], P-value: [0.08972478]
-GMM Parameters: Number of modes: 9
-Weights: [0.21040101 0.16711765 0.02451683 0.13335396 0.0049533  0.00525492
- 0.03814666 0.0949338  0.32132187]
-Means: [ 0.49199266 -0.56412103 -2.71209047  1.12247798 -5.60135908  5.15930895
+K-S Statistic: [0.04523505], P-value: [0.08972478]  
+GMM Parameters: Number of modes: 9  
+Weights: [0.21040101 0.16711765 0.02451683 0.13335396 0.0049533  0.00525492  
+ 0.03814666 0.0949338  0.32132187]  
+Means: [ 0.49199266 -0.56412103 -2.71209047  1.12247798 -5.60135908  5.15930895  
   2.05214492 -1.3479226  -0.01357436]
-Covariances: [0.06011377 0.07175123 0.37331606 0.09497687 7.75101998 4.09494426
+Covariances: [0.06011377 0.07175123 0.37331606 0.09497687 7.75101998 4.09494426  
  0.27043805 0.14013863 0.04954631]
-
-
 
 
 ## Conclusions
 
-As expected the Gaussian fit to the data was extremely poor as was indicated by a P-statistic many orders of magnitude below the other distributions. 
-An interesting outcome is that GMMs was comparable to the much used Tukey Lambda distribution.
+As expected the Gaussian fit to the data was extremely poor as was indicated by a P-statistic many orders of magnitude below the other distributions. Stock returns are still not Gaussian.
+An interesting outcome is that GMMs very slightly outperformed the much used Tukey Lambda distribution.
 
 
