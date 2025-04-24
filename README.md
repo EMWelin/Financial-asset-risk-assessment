@@ -27,20 +27,13 @@ The purpose of this project is to demonstrate this deviation from normality and 
 
 ## Method
 
-I fit a Gaussian distribution to ten years of MSCI ACWI daily total-returns, starting at the 24th of April 2025. The same data was used to fit Jonhson SU and Tukey Lambda distributions as well as a Gaussian Mixture Model. Tukey Labda and Jonson SU are popular in financial modelling to their superior ability to capture heavy tails (extreme positive or negative values that are very unlikely under a Gaussian framework). The accuracy of the distributions are compared using the Kolmogorov-Smirnov test on three years of out-of-sample data.
+I fit a Gaussian distribution to ten years of MSCI ACWI daily total-returns, starting at the 24th of April 2025. The same data was used to fit Jonhson SU and Tukey Lambda distributions as well as a Gaussian Mixture Model. Tukey Labda and Jonson SU are popular in financial modelling due to their superior ability to capture heavy tails (extreme positive or negative values that are very unlikely under a Gaussian framework). The accuracy of the distributions are compared using the Kolmogorov-Smirnov test on three years of out-of-sample data.
 
 
 ## Results 
 
 The results of the experiment is presented below. The KS statistic measures the distance between the observed results and the estimated PDF so a lower value indicates a better fit.  
-On the other hand, a higher p-value is better because it indicates higher confidence that the distribution is a good fit.
-
-The two best distributions were Johnson SU and Gaussian Mixture Model with 9 components ('modes'). Graphs of these fits can be seen below:
-
-![Fitted GMM distribution](images/GMM.png)
-![Fitted Johnson SU distribution](images/johnsonsu.png)
-
-Lower KS statistics and higher p-values indicate a better fit.
+On the other hand, a higher p-value is considered better because it indicates a higher confidence that the distribution is a good fit.
 
 
 | Distribution         | KS Statistic | P-Value     |
@@ -49,11 +42,18 @@ Lower KS statistics and higher p-values indicate a better fit.
 | **Johnson SU**       | 0.0387       | 0.2064      |
 | **Tukey Lambda**     | 0.0458       | 0.0828      |
 | **GMM (9 modes)**    | 0.0452       | 0.0897      |
+
+The two best distributions were Johnson SU and Gaussian Mixture Model with 9 components ('modes'). Graphs of these fits can be seen below:
+
+![Fitted GMM distribution](images/GMM.png)
+![Fitted Johnson SU distribution](images/johnsonsu.png)
+
+
  
 ## Conclusions
 
 As expected, the Gaussian distribution performed poorly — with a KS p-value several orders of magnitude below the rest.
 
-Both Johnson SU and GMM significantly outperformed the Gaussian assumption. Interestingly, the GMM slightly edged out Tukey Lambda in this case, highlighting its ability to capture local structure and multi-modality in return distributions.
+Every other distribution significantly outperformed the Gaussian assumption. Interestingly, the GMM slightly edged out Tukey Lambda in this case, highlighting its ability to capture local structure and multi-modality in return distributions.
 
 
