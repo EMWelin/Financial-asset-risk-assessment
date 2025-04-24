@@ -9,8 +9,6 @@ April 2025
 
 SciPy, Sci-kit learn, Yahoo Finance, datetime, Python, Python Pandas
 
-Date January 2025.
-
 ## Introduction
 
 Understanding risk is central to any investment endeavor. Legendary investor Warren Buffett famously stated:
