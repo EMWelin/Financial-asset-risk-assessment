@@ -1,4 +1,4 @@
-# Financial-asset risk-assessment
+# Financial-asset return-distribution estimation
 
 The purpose of this repo is to investigate the statistical behaviour of the World Index of Stocks known as MSCI ACWI which
 consists of a majority weight in developed markets (Global stocks) and a minority weight in Emerging Markets. 
