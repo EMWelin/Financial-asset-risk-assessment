@@ -30,7 +30,7 @@ I fit a Gaussian distribution to ten years of MSCI ACWI daily total-returns, sta
 
 ## Results 
 
-The results of the experiment is presented below. The KS statistic measures the distance between the observed results and the estimated PDF so a lower value is better.
+The results of the experiment is presented below. The KS statistic measures the distance between the observed results and the estimated PDF so a lower value indicates a better fit.  
 On the other hand, a higher p-value is better because it indicates higher confidence that the distribution is a good fit.
 
 The two best distributions were Johnson SU and Gaussian Mixture Model with 9 components ('modes'). Graphs of these fits can be seen below:
@@ -38,36 +38,20 @@ The two best distributions were Johnson SU and Gaussian Mixture Model with 9 com
 ![Fitted GMM distribution](images/GMM.png)
 ![Fitted Johnson SU distribution](images/johnsonsu.png)
 
-=== Gaussian ===
-Parameters: mean=0.037760068414518635, standard deviation=1.1072097227036375  
-KS Statistic: [0.11306013]  
-P-Value: [8.10190651e-09]
-
-=== Johnson SU ===
-Parameters: a=0.1046772810873723, b=1.1400055678255596, loc=0.1487844110017341, scale=0.8020460624157375  
-KS Statistic: [0.03865402]  
-P-Value: [0.20638882]
-
-=== Tukey Lambda ===
-Parameters: loc=0.0769003229605155, scale=0.3799193834238573  
-KS Statistic: [0.04581586]  
-P-Value: [0.08283883]  
-
-=== Gaussian Mixture Model ===
-
-K-S Statistic: [0.04523505], P-value: [0.08972478]  
-GMM Parameters: Number of modes: 9  
-Weights: [0.21040101 0.16711765 0.02451683 0.13335396 0.0049533  0.00525492  
- 0.03814666 0.0949338  0.32132187]  
-Means: [ 0.49199266 -0.56412103 -2.71209047  1.12247798 -5.60135908  5.15930895  
-  2.05214492 -1.3479226  -0.01357436]  
-Covariances: [0.06011377 0.07175123 0.37331606 0.09497687 7.75101998 4.09494426  
- 0.27043805 0.14013863 0.04954631]
+Lower KS statistics and higher p-values indicate a better fit.
 
 
+| Distribution         | KS Statistic | P-Value     |
+|----------------------|--------------|-------------|
+| **Gaussian**         | 0.1131       | 8.1e-09     |
+| **Johnson SU**       | 0.0387       | 0.2064      |
+| **Tukey Lambda**     | 0.0458       | 0.0828      |
+| **GMM (9 modes)**    | 0.0452       | 0.0897      |
+ 
 ## Conclusions
 
-As expected the Gaussian fit to the data was extremely poor as was indicated by a P-statistic many orders of magnitude below the other distributions. Stock returns are still not Gaussian.
-An interesting outcome is that GMMs very slightly outperformed the much used Tukey Lambda distribution.
+As expected, the Gaussian distribution performed poorly — with a KS p-value several orders of magnitude below the rest.
+
+Both Johnson SU and GMM significantly outperformed the Gaussian assumption. Interestingly, the GMM slightly edged out Tukey Lambda in this case, highlighting its ability to capture local structure and multi-modality in return distributions.
 
 
