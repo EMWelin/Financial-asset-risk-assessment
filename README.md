@@ -4,6 +4,8 @@
 The purpose of this repo is to investigate the statistical behaviour of the World Index of Stocks known as MSCI ACWI which
 consists of a majority weight in developed markets (Global stocks) and a minority weight in Emerging Markets. 
 
+https://www.msci.com/indexes/index/892400
+
 April 2025
 
 ## 🔑 Keywords 
