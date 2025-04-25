@@ -1,4 +1,4 @@
-# Financial-asset-risk-assessment
+# Financial-asset distribution fit
 
 
 The purpose of this repo is to investigate the statistical behaviour of the World Index of Stocks known as MSCI ACWI which
